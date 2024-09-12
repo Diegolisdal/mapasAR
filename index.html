@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <script src="./Scripts/gesture_detector.js"></script>
     <script src="./Scripts/gesture_handler.js"></script>
 </head>
+
 <body style="margin: 0; overflow: hidden;">
     <!-- Botón de menú hamburguesa -->
     <div class="menu-toggle" id="menu-toggle">
@@ -26,7 +28,7 @@
     </nav>
 
     <a-scene vr-mode-ui="enabled: false;" loading-screen="enabled: false;" renderer="logarithmicDepthBuffer: true;"
-        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" id="scene" embedded gesture-detector>
+        arjs="trackingMethod: best; sourceType: webcam; facingMode: environment; debugUIEnabled: false;">
         <a-assets>
             <a-asset-item id="animated-asset" src="assets/asset.glb"></a-asset-item>
         </a-assets>
@@ -42,7 +44,7 @@
 
     <script>
         // Funcionalidad para mostrar/ocultar el menú
-        document.getElementById('menu-toggle').addEventListener('click', function() {
+        document.getElementById('menu-toggle').addEventListener('click', function () {
             var menu = document.getElementById('menu');
             if (menu.style.display === 'block') {
                 menu.style.display = 'none';
@@ -52,4 +54,5 @@
         });
     </script>
 </body>
+
 </html>
